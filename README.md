@@ -1,5 +1,5 @@
 # OpenGeoGuess
- Client-side mini-game inspired by Geoguessr. Uses Google Street View for panoramas and Leaflet as a map engine. Just put your Google API key in index.html (replace 'YOUR_GOOGLE_API_KEY')
+ Client-side mini-game inspired by Geoguessr. Uses Google Street View for panoramas and Leaflet as a map engine. Just put your Google API key in index.html (replace 'YOUR_GOOGLE_API_KEY') ([DEMO](https://jsfiddle.net/Fixxy/j6w1gL9q/))
 
 ![screenshot](https://raw.githubusercontent.com/Fixxy/opengeoguess/master/screen.jpg)
 
