@@ -1,0 +1,2 @@
+# OpenGeoGuess
+ Geoguessr inspired project
