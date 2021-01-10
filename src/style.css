@@ -1,18 +1,108 @@
+/* globals */
 html, body {
 	height: 100%;
-	width: 100%;
-	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
 }
 
+/* game window */
 #wrapper {
 	height: 100%;
-	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* google street view */
+#pano {
+	height: 100%;
+	z-index: 1000;
+	background-color: black;
 }
 
-#streetview {
+
+/* ***************** */
+/* map related stuff */
+/* ***************** */
+#map {
+	z-index: 1001;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 150px;
+	position: absolute;
+}
+.leaflet-custom-button {
+	width: 32px;
+	height: 32px;
+	background-position: center !important;
+	background-color: white;
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+}
+.leaflet-big-btn {
+	cursor: pointer;
+	background: url(./images/size.svg) no-repeat;
+	background-color: white;
+	background-size: 20px;
+	background-position: center center;
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+
+/* ******** */
+/* Controls */
+/* ******** */
+#controls {
+	display: flex;
+	top: 0;
+	left: 0;
+	padding: 0.5em 0;
+	position: absolute;
+	z-index: 1002;
+}
+#next, #guess {
+	padding: 0 0.5em;
+}
+
+
+/* ********************* */
+/* spinner loader thingy */
+/* ********************* */
+#spinner {
+	display: none;
+	background-color: #000000aa;
+	position: absolute;
 	height: 100%;
 	width: 100%;
+	z-index: 1010;
+}
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+	border-color: #fff transparent #fff transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>OpenStreetGuess</title>
+		<title>OpenGeoGuess</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -10,12 +10,28 @@
 		<meta property="og:title" content="OpenStreetGuess" />
 		<meta property="og:description" content="" />
 
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCia4NT2Xq1lS_Xa1RKim_kFhJWhWDWpzU" type="text/javascript"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&callback=initPano&libraries=&v=weekly" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="pao"></div>
-			<div id="controls"></div>
+			<div id="spinner" >
+				<div class="lds-dual-ring"></div>
+			</div>
+			<div id="controls">
+				<div id="next">
+					<a class="btn-floating btn-large waves-effect waves-light blue">
+						<i class="material-icons">autorenew</i>
+					</a>
+				</div>
+				<div id="guess">
+					<a class="btn-floating btn-large waves-effect waves-light green">
+						<i class="material-icons">done</i>
+					</a>
+				</div>
+			</div>
+			<div id="pano"></div>
 			<div id="map"></div>
 		</div>
 	</body>
