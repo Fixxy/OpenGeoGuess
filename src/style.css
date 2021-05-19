@@ -1,5 +1,6 @@
 /* globals */
-html, body {
+html,
+body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -22,32 +23,26 @@ html, body {
 /* ***************** */
 /* map related stuff */
 /* ***************** */
-#map {
-	z-index: 1001;
-	bottom: 0;
-	left: 0;
-	width: 250px;
-	height: 150px;
+#map-overlay-wrap {
+	cursor: pointer;
 	position: absolute;
+	bottom: 2rem;
+	right: 3rem;
+	opacity: 1;
+	transform: scale(.8);
+	transform-origin: bottom right;
+	visibility: visible;
+	transition: all 1s;
+	z-index: 1001;
 }
-.leaflet-custom-button {
-	width: 32px;
-	height: 32px;
-	background-position: center !important;
-	background-color: white;
-	cursor: pointer;
-	text-align: center;
-	line-height: 30px;
+#map-overlay-wrap:hover {
+	transform: scale(1);
 }
-.leaflet-big-btn {
-	cursor: pointer;
-	background: url(./images/size.svg) no-repeat;
-	background-color: white;
-	background-size: 20px;
-	background-position: center center;
-	height: 40px;
-	width: 40px;
-	float: left;
+#map {
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+	width: 420px;
 }
 
 
@@ -55,15 +50,26 @@ html, body {
 /* Controls */
 /* ******** */
 #controls {
-	display: flex;
-	top: 0;
-	left: 0;
-	padding: 0.5em 0;
 	position: absolute;
-	z-index: 1002;
+	top: 10px;
+	left: 10px;
+	z-index: 1001;
 }
-#next, #guess {
-	padding: 0 0.5em;
+.btn {
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: .025em;
+	width: 100%;
+	text-align: center;
+	border-radius: .5rem;
+	margin-bottom: .75rem;
+}
+#next {
+	background-color: #2196f3;
+}
+#guess {
+	background-color: #66cc00;
 }
 
 
@@ -99,10 +105,6 @@ html, body {
 	animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }

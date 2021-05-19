@@ -1,5 +1,5 @@
-/* controls, buttons */
-class ControlPanel {
+/** controls, button events */
+class Controls {
 	constructor() {
 		this.nextButton = document.getElementById('next');
 		this.guessButton = document.getElementById('guess');
@@ -16,4 +16,4 @@ class ControlPanel {
 	}
 }
 
-export default ControlPanel;
+export default Controls;
